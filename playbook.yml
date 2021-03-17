@@ -1,0 +1,17 @@
+---
+- hosts: all
+  tasks:
+          - name: "Installing httpd package"
+            package:
+                    name: "httpd"
+                    state: present
+          - name: "Copying HTML Website code to /var/www/html/"
+            copy:
+                    src: "./index.html"
+                    dest: "/var/www/html/index.html"
+          - name: "Starting HTTPD services"
+            service:
+                    name: "httpd"
+                    state: started
+                    enabled: true
+
