@@ -41,18 +41,5 @@
 # leading 0s:
 
 ## db-[99:101]-node.example.com
-
-[allnodes]
-node[1:5].lw.example.com
-master
-yumserver
-
-[masters]
-master
-yumserver
-
-[workers]
-node[1:5].lw.example.com
-
-[yumservers]
-yumserver
+[test]
+node1.lw.example.com

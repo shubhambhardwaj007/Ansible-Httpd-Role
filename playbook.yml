@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: test
   tasks:
           - name: "Installing httpd package"
             package:
@@ -9,9 +9,15 @@
             copy:
                     src: "./index.html"
                     dest: "/var/www/html/index.html"
+            notify: httpd_restart
           - name: "Starting HTTPD services"
             service:
                     name: "httpd"
                     state: started
                     enabled: true
+  handlers:
+          - name: httpd_restart
+            service:
+                    name: "httpd"
+                    state: restarted
 
