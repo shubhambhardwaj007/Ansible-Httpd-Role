@@ -9,8 +9,8 @@
 - Clone this repository on Local Machine and edit `ansible.cfg` file to add up location where our Role is present using `roles_path` keyword.
 - Now create Inventory File and Playbook for running this role.Specify Inventory Location in Inventory using `inventory`.
 - Copy WebPage you like to deploy on webserver to `Ansible-Httpd-Role/files/` and edit `Ansible-Httpd-Role/vars/main.yml` to tell about webpage.
-- Go Inside `Ansible-Httpd-Role/vars/main.yml` folder and edit below given variable to tell about New WebPage.
-> web_page_deploy
+- Go Inside `Ansible-Httpd-Role/vars/main.yml` folder and edit `web_page_deploy` given variable to tell about New WebPage.
 ### Finally all things set so it's time to Deploy above complete setup and run 
 > ansible-playbook <name_of_playbook>
 
+## Detailed Article: [Ansible-Httpd-Role Article](https://www.linkedin.com/posts/shubham--bhardwaj_vimaldaga-righteducation-educationredefine-activity-6781687942730670080-j9fz)
