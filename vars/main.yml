@@ -1,2 +1,3 @@
 ---
 # vars file for Ansible-Httpd-Role
+web_page_deploy: "index.html"
