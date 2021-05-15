@@ -8,7 +8,6 @@ tasks:
           package:
                   name: "php"
                   state: present
-       state: present
         - name: "Copying HTML Website code to /var/www/html/"
           copy:
                   src: "{{ web_page_deploy }}"
