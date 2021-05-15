@@ -4,11 +4,16 @@ tasks:
         - name: "Installing httpd package"
           package:
                   name: "httpd"
+        - name: "Installing PHP Runtime"
+          package:
+                  name: "php"
                   state: present
+       state: present
         - name: "Copying HTML Website code to /var/www/html/"
           copy:
                   src: "{{ web_page_deploy }}"
                   dest: "/var/www/html/{{ web_page_deploy }}"
+                  force: True
           notify: httpd_restart
         - name: "Starting HTTPD services and Enabling it permanently"
           service:
