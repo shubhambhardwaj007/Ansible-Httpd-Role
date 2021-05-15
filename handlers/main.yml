@@ -1,8 +1,7 @@
 ---
 # handlers file for Ansible-Httpd-Role
-handlers:
-        - name: httpd_restart
-          service:
-                  name: "httpd"
-                  state: restarted
+- name: httpd_restart
+  service:
+          name: "httpd"
+          state: restarted
 
